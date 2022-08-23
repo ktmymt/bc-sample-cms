@@ -15,11 +15,21 @@
     "title": {
       "type": "string"
     },
-    "editor": {
+    "content": {
       "type": "richtext"
     },
     "date": {
       "type": "date"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
     }
   }
 }
