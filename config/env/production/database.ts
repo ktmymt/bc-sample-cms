@@ -1,9 +1,9 @@
-import { parse } from "pg-connection-string"
+import { parse } from "pg-connection-string";
 const config = parse(process.env.DATABASE_URL);
 
 export default ({ env }) => ({
   connection: {
-    client: 'postgres',
+    client: "postgres",
     connection: {
       host: config.host,
       port: config.port,
@@ -11,7 +11,7 @@ export default ({ env }) => ({
       user: config.user,
       password: config.password,
       ssl: {
-        rejectUnauthorized: false
+        rejectUnauthorized: false,
       },
     },
     debug: false,
