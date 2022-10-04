@@ -26,6 +26,12 @@
       ],
       "type": "media",
       "multiple": false
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article",
+      "mappedBy": "editor"
     }
   }
 }

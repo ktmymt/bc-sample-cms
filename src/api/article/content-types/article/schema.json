@@ -21,15 +21,10 @@
     "date": {
       "type": "date"
     },
-    "categories": {
+    "category": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "oneToOne",
       "target": "api::category.category"
-    },
-    "tags": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::tag.tag"
     },
     "cover": {
       "type": "media",
@@ -41,6 +36,15 @@
         "videos",
         "audios"
       ]
+    },
+    "isParent": {
+      "type": "boolean"
+    },
+    "editor": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::editor.editor",
+      "inversedBy": "articles"
     }
   }
 }
