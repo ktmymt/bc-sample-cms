@@ -37,9 +37,6 @@
                 "audios"
             ]
         },
-        "isParent": {
-            "type": "boolean"
-        },
         "editor": {
             "type": "relation",
             "relation": "manyToOne",
